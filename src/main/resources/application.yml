@@ -1,0 +1,19 @@
+server:
+  port: 5050
+
+spring:
+  application:
+    name: msvc-messageManagement
+
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/messagemanagementdb
+    username: root
+    password: P4ssword
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
